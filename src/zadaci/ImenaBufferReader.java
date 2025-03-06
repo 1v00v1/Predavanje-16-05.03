@@ -20,15 +20,15 @@ public class ImenaBufferReader {
                 BufferedReader reader = new BufferedReader(in)
         ) {
             text = reader.readLine();
+            imena = text.split(";");
 
+            for (String ime : imena) {
+                System.out.println(ime);
+
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        imena = text.split(";");
 
-        for (String ime : imena) {
-            System.out.println(ime);
-
-        }
     }
 }
